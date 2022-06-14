@@ -12,6 +12,8 @@ func main() {
     
     // determine what time it is
     watch := time.Now() 
+    fmt.Println(watch)
+
     
     // there is no condition here
     // read as, "switch true"

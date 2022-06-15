@@ -38,7 +38,7 @@ func main() {
     jsonFile, err := os.Open("users.json")
     // if we os.Open returns an error then handle it
     if err != nil {
-        fmt.Println(err)
+        panic(err)
     }
 
     fmt.Println("Successfully Opened users.json")
@@ -64,6 +64,7 @@ func main() {
         fmt.Println("User Age: " + strconv.Itoa(users.Users[i].Age))
         fmt.Println("User Name: " + users.Users[i].Name)
         fmt.Println("Facebook Url: " + users.Users[i].Social.Facebook)
+        fmt.Println("Twitter Url:" + users.Users[i].Social.Twitter)
     }
 
 }

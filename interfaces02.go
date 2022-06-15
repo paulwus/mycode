@@ -8,6 +8,7 @@ import "fmt"
 type animal interface {
     breathe()
     walk()
+    years()
 }
 
 type tiger struct {
@@ -19,7 +20,11 @@ func (l tiger) breathe() {
 }
 
 func (l tiger) walk() {
-    fmt.Println("tiger walk")
+    fmt.Println("tiger walks")
+}
+
+func (l tiger) years() {
+    fmt.Println("tiger age")
 }
 
 type giraffe struct {
@@ -31,17 +36,23 @@ func (l giraffe) breathe() {
 }
 
 func (l giraffe) walk() {
-    fmt.Println("giraffe walk")
+    fmt.Println("giraffe walks")
+}
+
+func (l giraffe) years() {
+    fmt.Println("giraffe age")
 }
 
 func main() {
     l := tiger{age: 10}
     callBreathe(l)
     callWalk(l)
+    callYears(l)
 
     d := giraffe{age: 5}
     callBreathe(d)
     callWalk(d)
+    callYears(d)
 }
 
 func callBreathe(a animal) {
@@ -52,3 +63,6 @@ func callWalk(a animal) {
     a.walk()
 }
 
+func callYears(a animal) {
+    a.years()
+}

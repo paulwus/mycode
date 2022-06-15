@@ -24,9 +24,9 @@ func main() {
     // creating a struct with some lowercase names
     type ColorGroup struct {
         ID     int      // uppercase - "OK" at function level because it is a field name
-        name   string   // lowercase
-        colors []string // lowercase
-        p      Person `json:"Person"`   // lowercase (struct, not JSON tag)
+        Name   string   // lowercase
+        Colors []string // lowercase
+        P      Person `json:"Person"`   // lowercase (struct, not JSON tag)
     }
 
     per := Person{Fn: "RZ",
@@ -36,9 +36,9 @@ func main() {
     // group is the TYPE ColorGroup
     group := ColorGroup{
         ID:     24601,
-        name:   "Greens",
-        colors: []string{"Moss", "Shamrock", "Lime", "Hunter"},
-        p:      per,
+        Name:   "Greens",
+        Colors: []string{"Moss", "Shamrock", "Lime", "Hunter"},
+        P:      per,
     }
     
     // serialize values from struct to json format

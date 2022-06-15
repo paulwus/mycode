@@ -1,11 +1,14 @@
+{{- /* This is a comment. The trim characters (hypens)
+         against the braces will ensure these lines are not rendered into
+         the final document */ -}}
 <h1>{{.PageTitle}}</h1>
 <ul>
-    {{range .Todos}}
-        {{if .Done}}
+    {{- range .Todos}}
+        {{- if .Done}}
             <li class="done">{{.Title}}</li>
-        {{else}}
+        {{- else}}
             <li>{{.Title}}</li>
-        {{end}}
-    {{end}}
+        {{- end}}
+    {{- end}}
 </ul>
 
